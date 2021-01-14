@@ -1,0 +1,11 @@
+## Répertoires
+
+/.settings/
+/Debug/
+/documentation/
+
+## Fichiers
+
+*.project
+*.cproject
+*.xml

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CompteGUIClass</class>
+ <widget class="QMainWindow" name="CompteGUIClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>750</width>
+    <height>421</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Outil de gestion de comptes</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTableWidget" name="tableWidgetCompte">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>731</width>
+      <height>361</height>
+     </rect>
+    </property>
+    <column>
+     <property name="text">
+      <string>Numéro</string>
+     </property>
+     <property name="textAlignment">
+      <set>AlignLeft|AlignVCenter</set>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Type</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Description</string>
+     </property>
+     <property name="textAlignment">
+      <set>AlignJustify|AlignVCenter</set>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Solde</string>
+     </property>
+     <property name="textAlignment">
+      <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Taux d'intérêt</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Taux d'intérêt minimum</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Transactions</string>
+     </property>
+    </column>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>750</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_dition">
+    <property name="title">
+     <string>Édition</string>
+    </property>
+    <widget class="QMenu" name="menuAjouter_Compte">
+     <property name="title">
+      <string>Ajouter Compte</string>
+     </property>
+     <addaction name="actionAjoutCheque"/>
+     <addaction name="actionAjoutEpargne"/>
+    </widget>
+    <addaction name="menuAjouter_Compte"/>
+    <addaction name="actionSuppressionCompte"/>
+   </widget>
+   <widget class="QMenu" name="menuFichier">
+    <property name="title">
+     <string>Fichier</string>
+    </property>
+    <addaction name="actionQuitter"/>
+   </widget>
+   <addaction name="menuFichier"/>
+   <addaction name="menu_dition"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionSuppressionCompte">
+   <property name="text">
+    <string>Supprimer Compte</string>
+   </property>
+  </action>
+  <action name="actionAjoutCheque">
+   <property name="text">
+    <string>Chèque</string>
+   </property>
+  </action>
+  <action name="actionAjoutEpargne">
+   <property name="text">
+    <string>Épargne</string>
+   </property>
+  </action>
+  <action name="actionQuitter">
+   <property name="text">
+    <string>Quitter</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionQuitter</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>CompteGUIClass</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>374</x>
+     <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

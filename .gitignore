@@ -1,0 +1,11 @@
+## Répertoires
+
+/.metadata/
+/Utilisation/
+/RemoteSystemsTempFiles/
+
+## Fichiers
+
+*.project
+*.cproject
+*.xml
